@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "showmodel": "../../components/showModel/showModel",
+    "inputmodel": "../../components/inputModel/inputModel"
+  },
+  "navigationBarTitleText":"个人信息"
+}

@@ -1,0 +1,79 @@
+/* pages/serves_info/serves_info.wxss */
+.top_contant{
+  background: #fff;
+}
+.top_img{
+  width: 100%;
+  height: 341rpx;
+}
+.left_title{
+  padding-left: 16px;
+  font-size: 34rpx;
+  color: rgba(31, 31, 31, 1);
+  font-weight:600; 
+}
+.icon_img{
+  width: 20rpx;
+  height: 24rpx;
+}
+.phone_icon{
+  width: 24rpx;
+  height: 42rpx;
+  transform: translateY(10rpx)
+}
+.text_left{
+  padding-left: 7px;
+}
+.text_right{
+  font-size: 26rpx;
+  padding: 26rpx 8rpx;
+  color: #fff;
+  
+}
+.rounded-pill{
+  padding: 10rpx 25rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  background: rgba(250, 60, 73, 1);
+}
+.car{
+  background: #fff;
+  padding: 10px 16px;
+  margin-top: 7.5px;
+}
+.title{
+  font-size:22px;
+  color: rgba(46, 46, 46, 1);
+  font-weight: 500
+}
+.title_box{
+  margin: 21px 0;
+}
+.info_left,.info_right{
+  font-size: 15px;
+}
+.info_left{
+  color: rgba(46, 46, 46, 1)
+}
+.info_right{
+  color: rgba(89, 104, 117, 1);
+  padding-left: 26px;
+}
+.info_detail{
+  font-size: 15px;
+  color: rgba(89, 104, 117, 1);
+  margin-top: 16px;
+  text-indent:2em;
+  /* letter-spacing:10px; */
+}
+.img_box{
+  display:flex; 
+}
+.img_item{
+  margin-left: 5px;
+}
+.b_img{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 4px;
+}

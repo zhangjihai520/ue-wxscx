@@ -1,0 +1,2 @@
+/* components/inputModel/inputModel.wxss */
+@import "../showModel/showModel.wxss"

@@ -1,0 +1,11 @@
+/* pages/setting/user_agree/user_agree.wxss */
+.content{
+  padding: 10rpx 30rpx 30rpx;
+  font-size: 12px;
+  line-height:20px;
+}
+.title{
+  font-size: 16px;
+  text-align: center;
+  padding-bottom: 5rpx;
+}

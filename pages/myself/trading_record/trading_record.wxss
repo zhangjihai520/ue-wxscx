@@ -1,0 +1,44 @@
+.container {
+  /* min-height: 100vh; */
+  background: #F2F1F8;
+}
+.bgView{
+  width: 100%;
+  height: 100vh;
+}
+.grayColor {
+  color: #757575;
+}
+.ptb_15 {
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+}
+.ptb_25 {
+  padding-top: 25rpx;
+  padding-bottom: 25rpx;
+}
+.pt_25 {
+  padding-top: 25rpx;
+}
+.plr_30 {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.floatLeft {
+  float: left;
+}
+.fs_4 {
+  font-size: 4vw;
+}
+.fs_3_5 {
+  font-size: 3.5vw;
+}
+.avatar {
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 10rpx;
+  margin-right: 15rpx;
+}
+.timeText {
+  width: 80%;
+}

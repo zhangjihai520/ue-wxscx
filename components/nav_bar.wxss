@@ -1,0 +1,64 @@
+/* comm/nav_bar.wxss */
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  display: flex;
+  font-size: 0;
+  background: #fff;
+}
+.tabbar-item {
+  flex: 1;
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 8rpx 10rpx 0;
+  color: #333333;
+}
+
+.tabbar-item:nth-child(2){
+  position: relative;
+  bottom: 60rpx;
+  height:150rpx;
+  flex: 0.7;
+}
+
+.tabbar-item:nth-child(2) .tabbar-item-icon{
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.tabbar-item:nth-child(2) .tabbar-item-icon image{
+  width: 120rpx;
+  height: 120rpx;
+  padding-top: 6px;
+}
+
+.tabbar-item:nth-child(2) .tabbar-item-text{
+  line-height: 0;
+  font-size: 28rpx;
+  margin-top: 8px;
+  color: #808080;
+}
+
+.tabbar-item-icon {
+  margin-bottom: 6rpx;
+  height: 56rpx;
+}
+
+.tabbar-item-icon image {
+  width: 56rpx;
+  height: 56rpx;
+}
+
+.tabbar-item-text {
+  font-size: 22rpx;
+  line-height: 20rpx;
+  padding-top: 2px;
+  color: rgba(138, 138, 138, 1);
+}
+.active {
+  color: rgba(66, 153, 235, 1);
+}

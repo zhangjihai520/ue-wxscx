@@ -1,0 +1,17 @@
+<view class="container">
+  <scroll-view scroll-y="true" bindscrolltolower="onReachBottom" class="bgView">
+    <view class="fs_4 grayColor whiteBackground ptb_25 plr_30">用户名：<text>{{userName}}</text></view>
+    <view wx:for="{{tradingRecord}}" wx:key="tradingRecord" wx:for-item="item">
+      <view class="plr_30 ptb_15 sideBySide">
+        <image src='{{timeIconUrl}}' class='avatar'></image>
+        <view class=" fs_4 timeText">{{item.createTime}}</view>
+      </view>
+      <view class="fs_4 whiteBackground plr_30">
+        <view class="sideBySide pt_25">
+          <view class="weui-flex__item">{{item.eventInfo}}</view>
+          <view class="weui-flex__item textAlign_r fs_3_5">概率 <span wx:if="{{item.step >0}}">+</span>{{item.step}}%</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

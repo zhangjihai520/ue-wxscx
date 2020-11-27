@@ -1,0 +1,49 @@
+<!--pages/post_detail/send_post/send_post.wxml-->
+<view class="contant">
+  <view class="weui-cell " style="padding-bottom:0">
+    <view class="weui-cell__bd">
+      <textarea class="weui-textarea" placeholder="点击输入图片内容..." rows="3" minlength="{{min}}" maxlength="{{max}}" bindinput="fontnNum" value="{{contant}}"></textarea>
+      <view class="weui-textarea-counter bd_style" >
+        <view>剩余{{currentWordNumber}}字</view>
+        <view class="weui-uploader__info">图片{{files.length}}/5</view>
+      </view>
+    </view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view class="weui-uploader">
+            <!-- <view class="weui-uploader__hd"> -->
+              <!-- <view class="weui-uploader__overview">
+                <view class="weui-uploader__title">图片上传</view>
+                <view class="weui-uploader__info">{{files.length}}/2</view>
+              </view>
+              <view class="weui-uploader__tips">
+                上传提示
+              </view> -->
+              
+            <!-- </view> -->
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files" id="uploaderFiles">
+                <block wx:for="{{files}}" wx:key="files" wx:key="*this">
+                  <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                    <icon class='uploader_item_icon' catchtap='clearImg' data-index="{{index}}" type="clear" size="20" color="red" />
+                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+                </block>
+
+              </view>
+              <view class="weui-uploader__input-box">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="btn weui-cell_active" bindtap="upImgs">
+    <a>发布</a>
+  </view>
+</view>

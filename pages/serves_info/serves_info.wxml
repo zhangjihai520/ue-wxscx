@@ -1,0 +1,55 @@
+<!--pages/serves_info/serves_info.wxml-->
+<view class="page">
+  <view class="top_contant">
+    <image class="top_img" src="{{serviceInfo.img}}"></image>
+    <h4 class="left_title">{{serviceInfo.name}}</h4>
+    <view class="weui-cell weui-cell_example">
+      <view class="weui-cell__hd">
+        <image mode="aspectFill" src="../../imgs/icon_map.png" class="icon_img" style=""></image>
+      </view>
+      <view class="weui-cell__bd">
+        <view class="weui-media-box__bd pr_2">
+          <view class="weui-media-box__desc text_left">{{serviceInfo.address}}</view>
+        </view>
+      </view>
+      <view class="weui-cell__ft rounded-pill" id="{{serviceInfo.phoneNumber}}" bindtap="callPhone">
+        <image class="phone_icon" src="../../imgs/icon_clphone.png"></image>
+        <text class="text_right">{{serviceInfo.phoneNumber}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="car">
+    <h4 class="title">详情</h4>
+    <!-- <view class="title_box">
+      <text class="info_left">服务类型</text>
+      <text class="info_right">洗车</text>
+    </view> -->
+    <view class="info_detail">{{serviceInfo.serviceInfo}}</view>
+    <!-- <view class="info_detail">
+      意大利无接触洗车+出水芙蓉精致 洗车)，汽车漆面美容（打蜡.封釉.镀膜.镀晶） 汽车内饰护理（内室清洁.内室桑拿.内室消毒） 汽车其他部件翻新（发动机翻新.轮毂翻新.大灯 翻新）特色技术（玻璃修复.凹陷修复.真皮修复. 汽车水彩等）
+    </view>
+    <view class="info_detail">
+      意大利无接触洗车+出水芙蓉精致 洗车)，汽车漆面美容（打蜡.封釉.镀膜.镀晶） 汽车内饰护理（内室清洁.内室桑拿.内室消毒） 汽车其他部件翻新（发动机翻新.轮毂翻新.大灯 翻新）特色技术（玻璃修复.凹陷修复.真皮修复. 汽车水彩等）
+    </view>
+    <view class="info_detail">
+      意大利无接触洗车+出水芙蓉精致 洗车)，汽车漆面美容（打蜡.封釉.镀膜.镀晶） 汽车内饰护理（内室清洁.内室桑拿.内室消毒） 汽车其他部件翻新（发动机翻新.轮毂翻新.大灯 翻新）特色技术（玻璃修复.凹陷修复.真皮修复. 汽车水彩等）
+    </view>
+
+    <view class="title_box">
+      <text class="info_left">服务图片</text>
+      <text class="info_right">洗车</text>
+    </view>
+    <view class="img_box">
+      <view class="img_item">
+        <image class="b_img" src="../../imgs/01.jpg"></image>
+      </view>
+      <view class="img_item">
+        <image class="b_img" src="../../imgs/01.jpg"></image>
+      </view>
+      <view class="img_item">
+        <image class="b_img" src="../../imgs/01.jpg"></image>
+      </view>
+    </view> -->
+  </view>
+
+</view>

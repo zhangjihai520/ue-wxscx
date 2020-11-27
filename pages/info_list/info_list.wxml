@@ -1,0 +1,24 @@
+<!--pages/info_list/info_list.wxml-->
+<view class="page_box">
+  <scroll-view scroll-y="true"  bindscrolltolower="onReachBottom" bindscrolltoupper="refesh" class='bgView'>
+    <view class='list_box' wx:for="{{info_list}}"  wx:key="info_list" wx:for-index="idx" bindtap="infoRed" data-id="{{item.mgTargetId}}" data-read="{{item.isRead}}" data-content="{{item.content}}">
+      <view class="weui-cell weui-cell_example ">
+        <view class="weui-cell__hd">
+          <image mode="" src="{{item.imgs}}" class="infoImg"></image>
+          <text class="dian" wx:if="{{item.isRead==0}}"></text>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="weui-media-box__bd" style="width:55vw !important">
+            <h4 class="weui-media-box__title">{{item.title}}</h4>
+            <view class="item_adress">{{item.content}}</view>
+          </view>
+        </view>
+         <view class="weui-cell__bd">
+          <view class="weui-media-box__bd">
+            <view class="item_tiem">{{item.createTime}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

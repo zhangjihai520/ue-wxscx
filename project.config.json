@@ -1,0 +1,215 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": false,
+    "scopeDataCheck": false,
+    "uglifyFileName": true,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "bundle": true,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": []
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.10.6",
+  "appid": "wx399d3724ae2d6f07",
+  "projectname": "ue-wxscx",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {
+    "qywx_simulator_plugin": "2.4.0"
+  },
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/myself/myself",
+          "pathName": "pages/myself/myself",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/setting/setting",
+          "pathName": "pages/setting/setting",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 2,
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/oil_detail/oil_detail",
+          "pathName": "pages/oil_detail/oil_detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/collect/collect",
+          "pathName": "pages/collect/collect",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/info_list/info_list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/info_list/info_list",
+          "pathName": "pages/info_list/info_list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 8,
+          "name": "pages/post_detail/post_detail",
+          "pathName": "pages/post_detail/post_detail",
+          "query": "dsMoodId=132f7c112b2640e29bd28e8dfd3daf1e",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/post_detail/send_post/send_post",
+          "pathName": "pages/post_detail/send_post/send_post",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/post_detail/send_post/send_post",
+          "pathName": "pages/post_detail/send_post/send_post",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/post_detail/send_post/send_post",
+          "pathName": "pages/post_detail/send_post/send_post",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/post_detail/post_detail",
+          "pathName": "pages/post_detail/post_detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/myself/add_licence_plate/licence_plate",
+          "pathName": "pages/myself/add_licence_plate/licence_plate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/myself/add_licence_plate/licence_plate",
+          "pathName": "pages/myself/add_licence_plate/licence_plate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/myself/trading_record/trading_record",
+          "pathName": "pages/myself/trading_record/trading_record",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/message_order/message_order",
+          "pathName": "pages/message_order/message_order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/post_detail/send_post/send_post",
+          "pathName": "pages/post_detail/send_post/send_post",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/setting/user_agree/user_agree",
+          "pathName": "pages/setting/user_agree/user_agree",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 19,
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

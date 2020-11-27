@@ -1,0 +1,68 @@
+<!--pages/oil_detail/oil_detail.wxml-->
+<view class="page">
+  <view class="img_box" style="background-image:url({{detail_top.img}})">
+    <!-- <image class="imgs" src="{{detail_top.img}}"></image> -->
+  </view>
+  <view class="card_box">
+    <view class="weui-cell weui-cell_example">
+      <view class="weui-cell__hd">
+        <image  src="{{detail_top.img}}" class="list_img" style=""></image>
+      </view>
+      <view class="cover" wx:if="{{detail_top.businessStatus ==1}} ">正常营业</view>
+      <view class="cover" wx:if="{{detail_top.businessStatus ==0}}">暂停营业</view>
+      <view class="weui-cell__bd">
+        <view class="weui-media-box__bd">
+          <h4 class="weui-media-box__title">{{detail_top.name}}</h4>
+          <view class="weui-media-box__desc">{{detail_top.adress}}</view>
+        </view>
+      </view>
+      <view class="weui-cell__ft rounded-pill">
+        <image class="nav_icon" src="../../imgs/nav.png"></image>
+        <text>{{detail_top.distance}}km</text>
+      </view>
+    </view>
+    <view class="weui-flex mark_top">
+      <view class="mark_box" style="width:90%">
+        <text class="mark_item mark{{idx2}}" wx:for="{{item.arrMark}}"  wx:key="mark_item" wx:for-index="idx2">{{arrMark[idx2]}}</text>
+      </view>
+      <!-- <view class="icon_phone_set"> -->
+        <button open-type="share" class="icon_phone_set" size="mini" data-name="pageShare">
+          <image class="icon_show" src="../../imgs/show.png"></image>
+        </button>
+        <!-- <image class="icon_collect" src="../../imgs/collect.png"></image> -->
+        
+      <!-- </view> -->
+    </view>
+  </view>
+
+  <view class='topTabSwiper'>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>加油枪({{oilGun}}) </view>
+    <view class='tab tab_s {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>收费标准</view>
+    <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>实景图</view>
+  </view>
+
+  <swiper current="{{currentData}}" class='swiper' bindchange="bindchange">
+    <swiper-item>
+      <view class='swiper_con'>
+        <view class="page__bd page__bd_spacing">
+          <view class="flex_item" wx:for="{{oilList}}" wx:key="flex_item" wx:for-index="idx3">{{oilList[idx3]}}</view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="page__bd page__bd_spacing" style="margin-top:15px;border-radius:4px;">
+        <view class="weui-flex swiper_itemTop" wx:key="swiper_itemTop" wx:for="{{priceList}}" wx:for-index="idx4">
+          <view class="weui-flex__item itemTop_name"> {{item.name}}</view>
+          <view class="weui-flex__item itemTop_price">￥{{item.amount}}/L</view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class='swiper_con'>
+        <view class="page__bd page__bd_spacing">
+          <view class='img_item {{idx4%2==0 ?"img_right" : ""}}' wx:key="img_item" wx:for="{{imgList}}" wx:for-index="idx4" src="{{}}" style="background-image:url({{imgList[idx4]}})"></view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

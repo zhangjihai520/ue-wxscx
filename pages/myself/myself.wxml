@@ -1,0 +1,68 @@
+<!--pages/myself/myself.wxml-->
+<view class="page">
+  <view class="top_contant">
+    <view class="weui-cell weui-cell_example user_box">
+      <view class="weui-cell__hd">
+        <image src="{{user.img}}" class="user_img"></image>
+      </view>
+      <view class="weui-cell__bd">
+        <view class="weui-media-box__bd">
+          <h4 class="weui-media-box__title user_name">{{user.name}}</h4>
+          <view class="status_box">
+            <text class="user_status">{{user.level}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="canvas_contant">
+      <canvas canvas-id="ringCanvas" class="canvas" bindtouchstart="touchHandler"></canvas>
+      <view class="text_info">下次加油免单的概率</view>
+    </view>
+  </view>
+
+  <view class="weui-media-box weui-media-box_small-appmsg">
+    <view class="weui-cells">
+      <a class="weui-cell weui-cell_active weui-cell_access weui-cell_exampl" bindtap="go_record" data-name="{{user.name}}">
+        <image class="icon_img" src="../../imgs/icon_record.png"></image>
+        <view class="weui-cell__bd weui-cell_primary">
+          <view class="text_left">交易记录</view>
+        </view>
+        <text class="weui-cell__ft"></text>
+      </a>
+      <a class="weui-cell weui-cell_active weui-cell_access weui-cell_example" data-status="{{user.carStatus}}" bindtap='go_mycar'>
+        <image class="icon_img" src="../../imgs/icon_car.png"></image>
+        <view class="weui-cell__bd weui-cell_primary">
+          <view class="text_left">我的车辆</view>
+        </view>
+        <text class="text_right">{{user.carStatus}}</text>
+        <text class="weui-cell__ft"></text>
+      </a>
+      <a class="weui-cell weui-cell_active weui-cell_access weui-cell_example" bindtap="go_collect">
+        <image class="icon_img" src="../../imgs/icon_star.png"></image>
+        <view class="weui-cell__bd weui-cell_primary" >
+          <view class="text_left">我的收藏</view>
+        </view>
+        <text class="weui-cell__ft"></text>
+      </a>
+      <a class="weui-cell weui-cell_active weui-cell_access weui-cell_example" bindtap="goAgree">
+        <image class="icon_img" src="../../imgs/icon_menu.png"></image>
+        <view class="weui-cell__bd weui-cell_primary">
+          <view class="text_left">用户协议</view>
+        </view>
+        <text class="weui-cell__ft"></text>
+      </a>
+    </view>
+  </view>
+  <view class="weui-media-box weui-media-box_small-appmsg" style="margin-top:6px;" bindtap="go_setting">
+    <view class="weui-cells">
+      <a class="weui-cell weui-cell_active weui-cell_access weui-cell_example">
+        <image class="icon_img" src="../../imgs/icon_setting.png"></image>
+        <view class="weui-cell__bd weui-cell_primary">
+          <view class="text_left">我的设置</view>
+        </view>
+        <text class="weui-cell__ft"></text>
+      </a>
+    </view>
+  </view>
+</view>
+<tabbar activeIdx="{{activeIdx}}"></tabbar>

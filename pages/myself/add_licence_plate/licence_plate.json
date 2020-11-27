@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "添加车辆",
+  "usingComponents": {
+    "plateNumberInput": "../../../components/plateNumberInput/index"
+  }
+}

@@ -1,0 +1,59 @@
+<!--pages/setting/srtting.wxml-->
+<view class="page">
+  <view class="weui-media-box weui-media-box_small-appmsg">
+    <view class="weui-cells">
+      <a class="weui-cell weui-cell_active weui-cell_access weui-cell_example" style="">
+        <view class="weui-cell__bd weui-cell_primary">
+          <view class="text_left">头像</view>
+        </view>
+        <image class="user_img" src="{{img[0]}}" bindtap="changeImg"></image>
+        <text class="weui-cell__ft"></text>
+      </a>
+      <a class="weui-cell weui-cell_active weui-cell_access weui-cell_example" bindtap="showInput" >
+        <view class="weui-cell__bd weui-cell_primary">
+          <view class="text_left">昵称</view>
+        </view>
+        <text class="text_right">{{name}}</text>
+        <text class="weui-cell__ft"></text>
+      </a>
+    </view>
+  </view>
+
+  <view class="weui-media-box weui-media-box_small-appmsg car_2">
+    <view class="weui-cells">
+      <a class="weui-cell weui-cell_active weui-cell_access weui-cell_example">
+        <view class="weui-cell__bd weui-cell_primary">
+          <view class="text_left">注册时间</view>
+        </view>
+        <text class="text_right">{{creatTime}}</text>
+        <text class="weui-cell__ft"></text>
+      </a>
+      <a class="weui-cell weui-cell_active weui-cell_access weui-cell_example">
+        <view class="weui-cell__bd weui-cell_primary">
+          <view class="text_left">账户安全</view>
+        </view>
+        <text class="text_right">{{phoneNumber}}</text>
+        <text class="weui-cell__ft"></text>
+      </a>
+    </view>
+  </view>
+
+  <view class="weui-media-box weui-media-box_small-appmsg car_2">
+    <view class="weui-cells">
+      <a class="weui-cell weui-cell_active weui-cell_access weui-cell_example" bindtap="goInfoList">
+        <view class="weui-cell__bd weui-cell_primary">
+          <view class="text_left">消息通知</view>
+        </view>
+        <text class="text_right"></text>
+        <text class="weui-cell__ft"></text>
+      </a>
+    </view>
+  </view>
+
+  <view class="btn weui-cell_active" bindtap="showPopup">
+    <a class="text_left">退出登录</a>
+  </view>
+  <showmodel id='showmodel' title='提示' content='是否退出登录' btn_no='取消' btn_ok='确定' inputShowed="true" bind:error="_error" bind:success="_success">
+  </showmodel>
+  <inputmodel id="inputmodel" title='请输入您的昵称' content='{{name}}' btn_no='取消' btn_ok='确定' bind:error="input_error" bind:success="input_success"></inputmodel> 
+</view>

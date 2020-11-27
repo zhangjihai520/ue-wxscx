@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="container_box">
+    <view class="plate_number">
+      <plateNumberInput prop-array="{{plateNumberArray}}" bind:myget='plateNumberInput'></plateNumberInput>
+    </view>
+    <view>
+      <a class="weui-btn weui-btn_primary save" bindtap="saveBtnClick">保存</a>
+      <view class="plate_number_tip">请绑定真实有效的车牌，否则将无法正常实用车牌付费等功能</view>
+    </view>
+  </view>
+</view>

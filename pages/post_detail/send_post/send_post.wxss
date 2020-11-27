@@ -1,0 +1,20 @@
+/* pages/post_detail/send_post/send_post.wxss */
+.btn{
+  width: 300rpx;
+  height: 78rpx;
+  background: rgba(17, 207, 178, 1);
+  margin: 100rpx auto;
+  font-size: 28rpx;
+  line-height: 78rpx;
+  color: #fff;
+  text-align: center;
+  border-radius: 50em;
+}
+.uploader_item_icon{
+  position: absolute;
+
+}
+.bd_style{
+  display: flex;
+  justify-content: space-between
+}

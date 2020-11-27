@@ -1,0 +1,40 @@
+/* pages/setting/srtting.wxss */
+.user_img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%
+}
+.weui-cell_active{
+  border-bottom:1px solid rgba(242, 242, 242, 1)
+}
+.weui-cell__ft{
+  border: none !important;
+}
+.text_left{
+  font-size: 15px;
+  color: rgba(13, 13, 13, 1);
+  font-weight: 500;
+}
+.text_right{
+  font-size: 15px;
+  color:rgba(112, 112, 112, 1);
+  ont-weight:400;
+}
+.car_2{
+  margin-top:7px;
+}
+.clearn_collect{
+  font-size: 12px;
+  color: rgba(255, 0, 0, 1);
+  padding: 2px 4px;
+  border: 1px solid rgba(255, 0, 0, 1);
+  border-radius: 50em;
+}
+.btn{
+  width: 100vw;
+  height: 50px;
+  text-align: center;
+  background: #fff;
+  line-height: 50px;
+  margin-top: 7px;
+}

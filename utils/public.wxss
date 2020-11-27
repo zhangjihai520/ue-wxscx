@@ -1,0 +1,30 @@
+.mark_item{
+  font-size: 10px;
+  padding: 5px;
+  border-radius: 4px;
+  text-align: center;
+}
+.mark0{
+  color: rgba(247, 131, 15, 1);
+  background:rgba(255, 236, 222, 1);
+}
+.mark1{
+  color: rgba(44, 134, 212, 1);
+  background:rgba(227, 242, 253, 1);
+  margin-left: 6px;
+}
+.mark2{
+  color: rgba(3, 150, 166, 1);
+  background:rgba(222, 250, 252, 1);
+  margin-left: 6px;
+}
+.mark3{
+  color: rgba(0, 151, 227, 1);
+  background:rgba(222, 247, 250, 1);
+  margin-left: 6px;
+}
+.mark4{
+  color: rgba(0, 151, 227, 1);
+  background:rgba(222, 247, 250, 1);
+  margin-left: 6px;
+}

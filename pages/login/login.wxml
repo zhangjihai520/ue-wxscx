@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<headerNavbar navbar-data='{{nvabarData}}'></headerNavbar>
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+
+    </block>
+  </view>
+  <view class="usermotto">
+      <button class="primary" bindtap="appLogin">一键登录</button>
+  </view>
+  <view class="drawer_screen" wx:if="{{showModel}}"></view>
+  <view class="drawer_box" wx:if="{{showModel}}">
+    <view wx:if="{{getPhone}}">
+      <view class="cover_title">提示</view>
+      <view class="cover_text">首次登录需要获取手机号码并且登录</view>
+      <view class="btn_box">
+        <navigator class="btns" open-type="exit" target="miniProgram">取消</navigator>
+        <button class="btns" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">确定</button>
+      </view>
+    </view>
+  </view>
+</view>

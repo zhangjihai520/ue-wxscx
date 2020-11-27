@@ -1,0 +1,26 @@
+/* pages/collect/collect.wxss */
+.bgView{
+  width: 100%;
+  height: 100vh;
+}
+.item_img{
+  width: 47px;
+  height: 46px;
+  border-radius: 10px;
+} 
+.list_box{
+  border-bottom: 1px solid rgba(242, 242, 242, 1);
+}
+.weui-media-box__bd{
+  padding-left:14px;
+  
+}
+.weui-media-box__title{
+  font-size: 16px;
+  color: rgba(26, 26, 26, 1);
+  font-weight: bold
+}
+.item_adress{
+  font-size: 12px;
+  color: rgba(140, 140, 140, 1)
+}

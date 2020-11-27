@@ -1,0 +1,30 @@
+/* pages/info_list/info_list.wxss */
+@import "../collect/collect.wxss";
+
+.infoImg {
+  width: 43rpx;
+  height: 43rpx;
+  border-radius: 50%;
+}
+
+.dian {
+  display: inline-block;
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+  background: rgba(255, 0, 0, 1);
+  position: relative;
+  right: 10rpx;
+  bottom: 24rpx;
+}
+
+.item_adress {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.item_tiem{
+  font-size: 22rpx;
+  color: rgba(138, 138, 138, 1);
+  text-align: right
+}

@@ -1,0 +1,164 @@
+/**index.wxss**/
+@import "../../utils/public.wxss";
+.page_box{
+  background: #fff;
+}
+.searchbar-result {
+  margin-top: 0;
+  font-size: 14px;
+}
+.searchbar-result .weui-cell__bd {
+  padding: 2px 0 2px 20px;
+  color: var(--weui-FG-1);
+}
+.input_color{
+  background: rgba(242, 242, 242, 1)
+}
+.map_icon{
+  width: 14px;
+  height: 17px;
+}
+.info_icon{
+  width: 21px;
+  height: 21px
+}
+
+.bgView{
+  width: 100%; 
+  /* height:850rpx; */
+  /* height: 100vh;
+  padding-bottom: 100rpx; */
+  background: #fff;
+}
+.swiper_item{
+  background:#fff;
+  /* margin-top:10px */
+}
+.weui-cell{
+  border-bottom: 1px solid rgba(242, 242, 242, 1);
+}
+.list_img{
+  margin-right: 16px;
+  vertical-align: middle;
+  width:160rpx;
+  height:126rpx;
+}
+.nav_icon{
+  width: 16px;
+  height:17px;
+  transform:translateY(5px)
+}
+.mark_box{
+  width:90vw; 
+}
+.icon_phone_set{
+  width: 10vw;
+  text-align: right;
+}
+.icon_phone{
+  width: 17px;
+  height: 17.5px
+}
+.swiper-tab{
+  width:100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  background: #fff;
+  border-bottom: 1px solid rgba(242, 242, 242, 1);
+  padding-left: 10px;
+}
+.swiper-tab-item{
+  display: inline-block;
+}
+.flex_item_style{
+  font-size: 14px;
+  padding:3px 0px;
+  margin: 5px 10px;
+  text-align: center;
+  color: rgba(23, 23, 23, 1);
+}
+.flex_active{
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 3px solid rgba(57, 146, 230, 1)
+}
+.cars_box{
+  width: 45vw;
+  height: 260px;
+  border-radius: 8px;
+  background: #fff;
+  margin:0 2.5vw 5px;
+  margin-top: 8px;
+  float: left;
+}
+.cars_boxLeft{
+  left: 2.5vw;
+}
+.car_img{
+  width: 100%;
+  height: 170px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.car_info{
+  font-size: 13px;
+  color: rgba(35, 35, 35, 1);
+  padding: 0 11px;
+}
+.cars_icon{
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+.cars_look{
+  margin-top: 0px;
+  padding:11px 5px !important;
+  border: none;
+}
+.carsLook_name{
+  font-size: 11px;
+  padding-left: 5px;
+  color: rgba(97, 97, 97, 1);
+  line-height: 28px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.left_title{
+ font-size: 15px ！important;
+ color:#1A1A1A !important;
+ font-weight: 600;
+}
+.left_adress{
+  font-size: 13px;
+}
+.text_use{
+  font-size: 11px;
+  padding:2px 5px;
+  border-radius: 4px;
+  background: rgba(255, 241, 217, 1);
+  color: rgba(230, 107, 0, 1);
+  font-weight: 400;
+}
+/*mask*/
+
+.addPost{
+  width: 91rpx;
+  height: 91rpx;
+  position: fixed;
+  bottom: 100rpx;
+  right:45rpx;
+  border-radius: 50%;
+}
+.addImg{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+ @media screen and (min-width:768px){
+ .bgView {
+    padding-bottom: 100rpx !important;
+  }
+} 

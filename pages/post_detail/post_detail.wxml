@@ -1,0 +1,118 @@
+<!--pages/post_detail/post_detail.wxml-->
+<view class="page">
+  <view class="boxTop">
+    <view class="weui-cell weui-cell_example">
+      <view class="weui-cell__hd">
+        <image mode="" src="{{moodDetailsTop.authorImageUrl}}" class="user_img" style=""></image>
+      </view>
+      <view class="weui-cell__bd">
+        <view class="weui-media-box__bd">
+          <view class="user_name">{{moodDetailsTop.authorName}}</view>
+          <view class="user_tiem">{{moodDetailsTop.createTime}}</view>
+        </view>
+      </view>
+      <!-- <view>
+        <text class="user_ask rounded-pill">提问</text>
+      </view> -->
+    </view>
+    <view class="text_info">
+      {{moodDetailsTop.content}}
+    </view>
+    <!-- <view class="show_box">
+      <image class="show_img" src="../../imgs/02.jpg"></image>
+    </view> -->
+    <swiper class="show_box" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="imgUrls">
+        <swiper-item>
+            <image src="{{item.imageUrl}}" class="show_img" mode="aspectFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <image class="icons" data-id="{{moodDetailsTop.dsMoodId}}" src="../../imgs/icon_info.png" bindtap="showInput"></image>
+        <text class="text_num">{{moodDetailsTop.commentCount}}</text>
+      </view>
+      <view class="weui-flex__item">
+        <image class="icons" data-id="{{moodDetailsTop.dsMoodId}}" src="{{moodIconEnshrine}}" bindtap="enshrine"></image>
+        <text class="text_num">{{moodDetailsTop.collectCount}}</text>
+      </view>
+      <view class="weui-flex__item">
+        <image class="icons" data-id="{{moodDetailsTop.dsMoodId}}" src="{{moodIconLike}}" bindtap="likeDsMood"></image>
+        <text class="text_num">{{moodDetailsTop.likeCount}}</text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="box_bottom">
+    <view class="itemTitle">热门评论</view>
+    <scroll-view style="height:{{swiperHeight}}" scroll-y="true" bindscrolltoupper="" bindscrolltolower="onReachBottom" bindscroll="scroll" scroll-into-view="{{}}" scroll-top="{{}}">
+      <view wx:for="{{moodDetailsComment}}" wx:key="moodDetailsComment" wx:for-item="item">
+        <view class="weui-cell weui-cell_example" style="padding:0">
+
+          <view class="weui-cell__bd">
+            <view class="weui-media-box__bd">
+              <view class="weui-cell weui-cell_example" style="padding-bottom:0">
+                <view class="weui-cell__hd">
+                  <image  src="{{item.authorImageUrl}}" class="share_img" style=""></image>
+                </view>
+                <view>
+                  <view class="share_name">{{item.authorName}}</view>
+                  <view class="share_name2">{{item.content}}</view>
+                </view>
+              </view>
+              <view class="share_info textAlign_c" wx:if="{{item.seeTheReply}}" data-id="{{item.dsMoodId}}" data-index="{{index}}" bindtap="seeTheReply">共{{item.commentCount}}条回复</view>
+
+              <view class="share_info" wx:if="{{item.packUp}}" wx:for="{{writeBack}}" wx:key="share_info" wx:for-item="items">
+                <view class="weui-cell weui-cell_example" style="padding-bottom:0">
+                  <view class="weui-cell__hd">
+                    <image  src="{{items.authorImageUrl}}" class="share_img" style=""></image>
+                  </view>
+                  <view class="weui-cell__bd">
+                    <view class="weui-media-box__bd">
+                      <view class="share_name">{{items.authorName}}</view>
+                      <view class="share_name2">{{items.content}}</view>
+                    </view>
+                  </view>
+                </view>
+                <view class="share_bd">
+                  <view class="share_conten">
+                    <view class="share_time">{{items.formatCreateTime}}</view>
+                  </view>
+                </view>
+              </view>
+              <view class="share_info textAlign_c" style="color: #737373;" data-index="{{index}}" wx:if="{{item.packUp}}" bindtap="packUp">收起</view>
+
+            </view>
+          </view>
+        </view>
+        <view class="share_bd">
+          <view class="share_conten">
+            <view class="share_time">{{item.formatCreateTime}}</view>
+            <view style="line-height:50rpx">
+              <image class="icons" data-id="{{item.dsMoodId}}" src="../../imgs/icon_info.png" bindtap="showInput"></image>
+              <text class="text_num" style="padding-right:40rpx">{{item.commentCount}}</text>
+              <image class="icons" data-id="{{item.dsMoodId}}" data-index="{{index}}" src="{{item.moodIconLike}}" bindtap="likeDsMood"></image>
+              <text class="text_num">{{item.likeCount}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="drawer_screen" wx:if="{{inputShow}}" catchtap="hideShow"></view>
+  <view class="drawer_box" wx:if="{{inputShow}}">
+    <view class="weui-cells weui-cells_form">
+      <view class="weui-cell ">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="优质评论会被优选进行热评" cursor-spacing="90" rows="3" minlength="{{min}}" maxlength="{{max}}" bindinput="fontnNum"></textarea>
+          <view class="weui-textarea-counter bd_style">
+            <view>剩余{{currentWordNumber}}字</view>
+            <view class="send" bindtap="sendInfo">发送</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

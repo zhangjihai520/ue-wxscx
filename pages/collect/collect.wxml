@@ -1,0 +1,17 @@
+<view class="page_box">
+  <scroll-view scroll-y="true" bindscrolltolower="onReachBottom"  class='bgView'>
+    <view class='list_box' wx:for="{{collect_list}}" wx:key="collect_list" wx:for-index="idx" data-id="{{item.dsMoodId}}" bindtap="goPostDetail">
+      <view class="weui-cell weui-cell_example ">
+        <view class="weui-cell__hd">
+          <image mode="" src="{{item.imageUrl}}" class="item_img" style=""></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="weui-media-box__bd">
+            <h4 class="weui-media-box__title">{{item.nickname}}</h4>
+            <view class="item_adress">{{item.content}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

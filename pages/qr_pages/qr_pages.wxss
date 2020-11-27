@@ -1,0 +1,2 @@
+/* pages/qr_pages/qr_pages.wxss */
+@import "../oil_detail/oil_detail.wxss"

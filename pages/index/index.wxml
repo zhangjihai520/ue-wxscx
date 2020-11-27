@@ -1,0 +1,128 @@
+<view class="page_box">
+  <view class="weui-search-bar weui-search-bar_focusing input_box" id="searchBar" style="border:none !important">
+    <view class="weui-search-bar__cancel-btn" bindtap="">
+      <!-- <image class="map_icon" src="../../imgs/map.png"></image> -->
+    </view>
+    <form class="weui-search-bar__form rounded-pill" style="border:2px solid rgba(63, 148, 226, 1)">
+      <view class="weui-search-bar__box input_color rounded-pill">
+        <i class="weui-icon-search"></i>
+        <input type="text" class="weui-search-bar__input" placeholder="地址/加油站名称" bindinput="getInput"
+          value="{{inputValue}}" />
+        <span class="weui-icon-clear" bindtap="clearnInput"></span>
+      </view>
+    </form>
+    <view class="weui-cell">
+      <view class="weui-cell__hd" style="position: relative;" bindtap="goInfoList">
+        <image class="info_icon" src="../../imgs/info.png"></image>
+        <text class="weui-badge" style="position: absolute; top: -0.6em; right: -0.8em;">{{infoNum}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="swiper-tab tab_box">
+    <view class="swiper-tab-item flex_item_style {{currentTab==0?'flex_active':''}}" data-current="0"
+      bindtap="clickTab">推荐</view>
+    <view class="swiper-tab-item flex_item_style {{currentTab==1?'flex_active':''}}" data-current="1"
+      bindtap="clickTab">车生活</view>
+    <view class="swiper-tab-item flex_item_style {{currentTab==2?'flex_active':''}}" data-current="2"
+      bindtap="clickTab">广场</view>
+    <view class="" style="position:absolute;right:5vw;padding-top:10px;">
+      <image class="icon_phone" src="../../imgs/fenlei.png"></image>
+    </view>
+  </view>
+
+  <swiper current="{{currentTab}}" bindchange="swiperTab" class='bgView' style="height:{{swiperHeight}}">
+    <swiper-item>
+      <view class="page-section-spacing">
+        <scroll-view scroll-y="true" bindscrolltolower="onReachBottom" bindscrolltoupper="refesh" class='bgView'
+          style="height:{{swiperHeight}}" class=" ">
+          <view class="weui-cells" wx:key="cars_box" wx:for="{{listData}}" wx:for-index="idx" data-detail="{{item.content}}"
+            data-id="{{item.onSiteId}}" bindtap='change_page' class="swiper_item">
+            <view class="weui-cell weui-cell_example">
+              <view class="weui-cell__hd">
+                <image mode="aspectFill" src="{{item.tOnSiteImages[0].imageUrl}}" class="list_img" style=""></image>
+              </view>
+              <view class="weui-cell__bd">
+                <view class="weui-media-box__bd pr_2">
+                  <h4 class="weui-media-box__desc left_title">{{item.name}}</h4>
+                  <view class="weui-media-box__desc left_adress">{{item.address}}</view>
+                  <view class="weui-media-box__desc text_red ">￥{{item.lowOilPrice}}-{{item.maxOilPrice}}</view>
+                </view>
+              </view>
+              <view class="weui-cell__ft rounded-pill">
+                <image class="nav_icon" src="../../imgs/nav.png"></image>
+                <text>{{item.distance}}km</text>
+              </view>
+            </view>
+            <view class="weui-flex" style="border-bottom:5px solid rgba(242, 242, 242, 1)">
+              <view class="mark_box" style="width:90%">
+                <text class="mark_item mark{{cssArr[idx2]}}" wx:key="mark_item" wx:for="{{item.tOnLabels}}"
+                  wx:for-index="idx2">{{item.name}}</text>
+              </view>
+              <view class="icon_phone_set" catchtap="callPhone" id="{{item.phoneNumber}}">
+                <image class="icon_phone" src="../../imgs/phone.png"></image>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </swiper-item>
+
+    <swiper-item>
+      <scroll-view scroll-y="true" bindscrolltolower="onReachBottom" bindscrolltoupper="refesh" class='bgView'
+        style="height:{{swiperHeight}}">
+        <view class="weui-cells" wx:key="serveList" wx:for="{{serveList}}" wx:for-index="idx3" data-detail="{{item.content}}" id="{{idx3}}"
+          bindtap='goServes' class="swiper_item" data-id="{{item.csServiceId}}">
+          <view class="weui-cell weui-cell_example" wx:if='{{serveList !=""}}'>
+            <view class="weui-cell__hd">
+              <image mode="aspectFill" src="{{item.tCsSvcImages[0].imageUrl}}" class="list_img" style=""></image>
+            </view>
+            <view class="weui-cell__bd">
+              <view class="weui-media-box__bd pr_2">
+                <h4 class="weui-media-box__desc left_title">{{item.storeName}}</h4>
+                <view class="weui-media-box__desc">
+                  {{item.provinceName+item.cityName+item.districtName+item.storeAddress}}</view>
+                <text class="text_use" wx:key="text_use" wx:for="{{item.tCsLabels}}" wx:for-index="sidx">{{item.name}}</text>
+              </view>
+            </view>
+            <view class="weui-cell__ft rounded-pill">
+              <image class="nav_icon" src="../../imgs/nav.png"></image>
+              <text>{{item.distance}}km</text>
+            </view>
+          </view>
+
+        </view>
+      </scroll-view>
+
+    </swiper-item>
+
+    <swiper-item>
+      <scroll-view scroll-y="true" bindscrolltolower="onReachBottom" bindscrolltoupper="refesh" class='bgView'
+        style="background:rgba(242, 242, 242, 1);height:{{swiperHeight}}">
+        <view class='cars_box'  wx:for="{{carsInfo_list}}" wx:key="cars_box" wx:for-index="car_idx" bindtap="goPostDetail"
+          data-id="{{item.dsMoodId}}">
+          <image class="car_img" src="{{item.tDsMoodImages[0].imageUrl}}"></image>
+          <view class="car_info">{{item.content}}</view>
+          <view class="weui-cell weui-cell_example cars_look">
+            <view class="weui-cell__hd">
+              <image mode="" src="{{item.authorImageUrl}}" class="cars_icon" style=""></image>
+            </view>
+            <view class="weui-cell__bd">
+              <view class="weui-media-box__bd">
+                <view class="carsLook_name">{{item.authorName}}</view>
+              </view>
+            </view>
+            <view>
+              <text class="carsLook_name">{{item.likeCount}}w订阅</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+      <view class="addPost" catchtap="goAddPost">
+        <image class="addImg" src="../../imgs/icon_addPost.png"></image>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  
+  <tabbar activeIdx="{{activeIdx}}"></tabbar>
+</view>

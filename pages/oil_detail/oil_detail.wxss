@@ -1,0 +1,146 @@
+/* pages/oil_detail/oil_detail.wxss */
+@import "../../utils/public.wxss";
+.img_box{
+  width:100vw;
+  height: 306rpx;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* display: table-cell;
+  vertical-align: middle; */
+}
+.imgs{
+  /* width: 100%;
+  height: 100%; */
+  /* max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto; */
+}
+.card_box{
+  width: 95vw;
+  height:125.5px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+  left: 2.5vw;
+  top: -30px;
+}
+.cover{
+  width: 45px;
+  font-size: 8px;
+  text-align: center;
+  background: rgba(0,0,0,0.56);
+  color: #fff;
+  position: absolute;
+  bottom:20px;
+}
+.weui-cell_example{
+  border-bottom: 1px solid rgba(242, 242, 242, 1);
+}
+.list_img{
+  width:45px;
+  height:45px;
+}
+.mark_top{
+  background: #fff;
+  border-radius: 10px;
+}
+.weui-media-box__bd{
+  padding-left: 10px;
+}
+.nav_icon{
+  width: 16px;
+  height:17px;
+  transform:translateY(5px)
+}
+.icon_phone_set{
+  /* width: 20%; */
+  text-align: right;
+  padding-top: 5px;
+  background: #fff;
+}
+.icon_collect,.icon_show{
+  width: 17px;
+  height: 17.5px;
+}
+.icon_collect{
+  margin-right: 20px;
+}
+
+.tab {
+  float: left;
+  width: 33%;
+  text-align: center;
+  font-size: 14px;
+}
+.tab_s{
+  border-left: 1px solid rgba(222, 222, 222, 1);
+  border-right: 1px solid rgba(222, 222, 222, 1);
+}
+.topTabSwiper {
+   margin-top: -20px;
+  border-bottom: 1px solid #ccc;
+  zoom: 1;
+  background: #fff;
+  padding: 10px 0;
+} 
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.tabBorer {
+  color:rgba(39, 118, 181, 1);
+  font-weight: bold;
+}
+.swiper {
+  width: 100%;
+  background: #fff;
+  height:60vh;
+}
+.swiper_con {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding:14px 0;
+}
+.flex_item{
+  width: 20vw;
+  float: left;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(107, 107, 107, 1);
+  box-sizing: border-box;
+  border: 1px solid rgba(224, 224, 224, 1);
+  padding: 5px 0;
+  margin-left: 2.5vw;
+  border-radius: 8px;
+  font-weight: bold
+}
+.swiper_itemTop{
+  background: rgba(242, 247, 250, 1);
+  border-bottom: 1px solid rgba(230, 235, 237, 1);
+}
+.itemTop_name,itemTop_price{
+  font-size: 13px;
+  color: rgba(62, 62, 62, 1); 
+}
+.itemTop_price{
+  text-align: right
+}
+.img_item{
+  width:40vw;
+  height: 187rpx;
+  float: left;
+  margin-bottom: 7px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.img_right{
+  margin-right: 10vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
